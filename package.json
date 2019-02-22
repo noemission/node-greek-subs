@@ -1,12 +1,12 @@
 {
-  "name": "node-greek-subs",
+  "name": "greek-subs",
   "version": "0.0.1",
-  "description": "",
+  "description": "Nodejs module to find greek subs",
   "main": "src/main.js",
   "scripts": {
     "test": "node test/index.js"
   },
-  "author": "",
+  "author": "Alexandros Michailidis",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^0.22.0",
@@ -14,5 +14,21 @@
     "request": "^2.88.0",
     "string-similarity": "^3.0.0",
     "yauzl": "^2.10.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-rokabilis/node-greek-subs.git"
+  },
+  "keywords": [
+    "subtitles",
+    "greek"
+  ],
+  "bugs": {
+    "url": "https://github.com/alex-rokabilis/node-greek-subs/issues"
+  },
+  "homepage": "https://github.com/alex-rokabilis/node-greek-subs#readme"
 }
