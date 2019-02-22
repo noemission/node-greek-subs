@@ -22,12 +22,16 @@ subs.search()
 
 ```js
 subs.on('search::start', data => {
+    // Triggered before every search attempt 
+
     /* data = {
         searchModule,
         query      
     }*/
 })
 subs.on('search::finished', data => {
+    // Triggered after every search attempt 
+
     /* data = {
         searchModule,
         query,
@@ -35,6 +39,8 @@ subs.on('search::finished', data => {
     }*/
 })
 subs.on('search::error', data => {
+    // Triggered when a search attempt failed
+
     /* data = {
         searchModule,
         query,
@@ -43,12 +49,16 @@ subs.on('search::error', data => {
 })
 
 subs.on('download::start', data => {
+    // Triggered before attempting to download a zipped subtitle
+
     /* data = {
         searchModule,
         url      
     }*/
 })
 subs.on('download::finish', data => {
+    // Triggered on a successful download 
+
     /* data = {
         searchModule,
         url,
@@ -56,6 +66,8 @@ subs.on('download::finish', data => {
     }*/
 })
 subs.on('download::error', data => {
+    // Triggered when a download attempt failed
+
     /* data = {
         searchModule,
         url,
