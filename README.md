@@ -86,3 +86,5 @@ subs.on('download::error', data => {
     }*/
 })
 ```
+## Related
+- [greek-subs-cli](https://www.npmjs.com/package/greek-subs-cli) - Greek subtitles cli tool
