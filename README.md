@@ -29,7 +29,7 @@ subs.on('search::start', data => {
         query      
     }*/
 })
-subs.on('search::finished', data => {
+subs.on('search::finish', data => {
     // Triggered after every search attempt 
 
     /* data = {
@@ -46,6 +46,17 @@ subs.on('search::error', data => {
         query,
         error // This query failed, search will continue with a different query
     }*/
+})
+
+subs.on('ranked_results', data => {
+    // Triggered after search emitted results
+    // Contains a sorted array of results based on the similarity of the subtitle name with the original query
+
+    /* data = [{
+        url,
+        text, // Name of the subtitle
+        rating // Levenshtein distance between sub name and original query
+    }]*/
 })
 
 subs.on('download::start', data => {

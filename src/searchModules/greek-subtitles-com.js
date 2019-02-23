@@ -15,7 +15,7 @@ module.exports = {
             .each(function () {
                 data.push({
                     url: $(this).attr('href'),
-                    text: $(this).text()
+                    text: $(this).text().trim()
                 })
             })
         return data;

@@ -4,6 +4,13 @@ const unzip = require('./common/unzip')
 const searchModules = require('./searchModules');
 const humanizeString = require('./common/humanizeString');
 
+const formatResults = (results) => {
+    return results.map(result => ({
+        url : result.url,
+        text : result.text,
+        rating : +result.rating.toPrecision(3),
+    }))
+}
 module.exports = class NodeGreekSubs extends EventEmitter {
     constructor(originalName) {
         super()
@@ -20,7 +27,9 @@ module.exports = class NodeGreekSubs extends EventEmitter {
         if(results.length === 0) return [];
 
         results = stringSimilarity(this.originalName, results)
-
+        
+        this.emit('ranked_results', formatResults(results))
+        
         const zipBuffer = await this.download(results);
         return await unzip(zipBuffer)
 
