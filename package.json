@@ -1,6 +1,6 @@
 {
   "name": "greek-subs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Nodejs module to find greek subs",
   "main": "src/main.js",
   "scripts": {
